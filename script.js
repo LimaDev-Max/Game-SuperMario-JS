@@ -1,5 +1,6 @@
 
 const mario = document.querySelector('.mario');
+const pipe = document.querySelector('.pipe');
 
 const jump = () => {
     mario.classList.add('jump');
@@ -10,6 +11,13 @@ const jump = () => {
 }
 
 const loop = setinterval(() => {
+
+    const pipePosition = pipe.offsetLeft;
+    
+    if (pipePosition < 120) {
+
+        pipe.style.animation = 'none';
+    }
 
 }, 10);
 
