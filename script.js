@@ -14,9 +14,10 @@ const loop = setinterval(() => {
 
     const pipePosition = pipe.offsetLeft;
     
-    if (pipePosition < 120) {
+    if (pipePosition <= 120) {
 
         pipe.style.animation = 'none';
+        pipe.style.left = `${pipePosition}px`;
     }
 
 }, 10);
